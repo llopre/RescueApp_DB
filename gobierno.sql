@@ -42,10 +42,11 @@ begin
 	values (@cuil, @nombre, @apellido, @email, @clave)
 
 end
-
 go
 
-create procedure get_usuario
+
+
+create or alter procedure get_usuario
 (
 	@cuil  varchar(15),
 	@clave varchar(20)
@@ -61,13 +62,15 @@ begin
 end
 go
 
-create procedure get_all_usuarios
+
+
+create or alter procedure get_all_usuarios
 as
 begin
 	select *
 	from usuarios
 end
-
-
 go
+
+
 
